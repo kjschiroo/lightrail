@@ -1,12 +1,13 @@
-= lightrail =
+# lightrail #
+
 Module for monitoring twin cities lightrail
 
-== install ==
+## install ##
     git clone https://github.com/kjschiroo/lightrail.git
     cd lightrail
     python3 setup.py install
 
-== usage ==
+## usage ##
 List station codes
 
     python3 -m lightrail.cmdline -l
