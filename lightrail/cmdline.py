@@ -1,9 +1,9 @@
-"""lightrail
+"""cmdline
 
 Usage:
-    lightrail.py [-b] [-x] <station_code>
-    lightrail.py -l
-    lightrail.py (-h | --help)
+    cmdline [-b] [-x] <station_code>
+    cmdline -l
+    cmdline (-h | --help)
 Options:
     -b                 Big text
     -x                 Expand station code to name
