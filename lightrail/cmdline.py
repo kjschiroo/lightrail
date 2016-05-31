@@ -92,11 +92,18 @@ def display_station(station_code, big, expand):
     if expand:
         printed_name = codes[station_code]
     while(True):
+        _try_print_single_departure(printed_name, station_code, big)
+        _waiting_bar(30)
+
+
+def _try_print_single_departure(printed_name, station_code, big):
+    try:
         departures = _get_soon_departures(station_code)
         dep_text = _prepare_departure_text(departures)
-        text = printed_name + '\n' + dep_text
-        _print_text(text, big)
-        _waiting_bar(30)
+    except ConnectionError as e:
+        dep_text = 'Bad Connection'
+    text = printed_name + '\n' + dep_text
+    _print_text(text, big)
 
 
 def main(args):
