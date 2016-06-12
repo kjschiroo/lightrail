@@ -102,6 +102,8 @@ def _try_print_single_departure(printed_name, station_code, big):
         dep_text = _prepare_departure_text(departures)
     except ConnectionError as e:
         dep_text = 'Bad Connection'
+    except TimeoutError as e:
+        dep_text = 'Timeout'
     text = printed_name + '\n' + dep_text
     _print_text(text, big)
 
