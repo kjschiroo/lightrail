@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='Lightrail',
-    version='0.1',
+    version='0.1.1',
     description='Module for monitoring twin cities lightrail',
     url='https://github.com/kjschiroo/Lightrail',
 
